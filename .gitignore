@@ -1,0 +1,59 @@
+# ==============================================================================
+# CIRCULAR-CORE: OUROBOROS | Open-Core Public Repository .gitignore
+# Excludes all Enterprise B2B/G2B modules, TITAN L4 industrial weights,
+# confidential audit dossiers, and local environment artifacts.
+# ==============================================================================
+
+# Python & Test Caches
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+.venv/
+.env
+*.log
+
+# Enterprise B2B/G2B Modules & Private Reporting (Strictly Local Only)
+enterprise/
+reporting/
+core/registro_miteco_rd764.py
+configs/tipos_impositivos_ley7.json
+app/app.py
+app/main.py
+tests/test_ouroboros_suite.py
+MAGDALENA-SCOPE3/
+_engine/
+scratch/
+.streamlit/
+build_clean_hf_app.py
+INICIAR_OUROBOROS_OPEN_CORE_PUBLIC.bat
+INICIAR_OUROBOROS_V1.bat
+
+# TITAN L4 Industrial Weights & Proprietary Training Scripts
+neural_lab/weights/
+neural_lab/train_*.py
+neural_lab/train_*.ipynb
+*.pt
+*.pth
+*.onnx
+
+# Confidential Dossiers, Local Launchers & Internal Directives
+DOSSIER_CONFIDENCIAL*
+FICHA_EJECUTIVA*
+factsheet_*
+AUDITORIA_*
+DIRECTIVA_*
+LA_BIBLIA_*
+PLANO_MAESTRO_*
+PLAN_EJECUCION_*
+TELEMETRIA_Y_AUDITORIA*
+ORDEN_EJECUTIVA_*
+build_ouroboros_whitepaper.py
+generar_figuras_paper.py
+repack_zenodo_package.py
+WHITE_PAPER_CIRCULAR_CORE_OUROBOROS_OPEN_CORE.html
+*.zip
+*.sha256
+docs/
+updates/
+deploy/

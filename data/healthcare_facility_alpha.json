@@ -1,0 +1,118 @@
+{
+  "facility_metadata": {
+    "protocol_id": "HEALTHCARE-FACILITY-ALPHA",
+    "facility_type": "Centro Asistencial Especializado Ambulatorio (Nivel I-3 / II)",
+    "location_jurisdiction": "Área Metropolitana - Sector Centro",
+    "surface_area_m2": 1850.0,
+    "audit_period_months": 25,
+    "audit_timeframe": "2024-03 a 2026-03",
+    "number_of_services": 23,
+    "total_mass_audited_kg": 3501.91,
+    "hazardous_mass_kg": 305.27,
+    "common_mass_kg": 3196.64,
+    "plans_in_place": [
+      "Plan Operativo de Gestión de Residuos 2024",
+      "Plan Estratégico de Economía Circular y Descarbonización 2026-2030 (5 años)"
+    ],
+    "miteco_rd764_registration": {
+      "nivel_1_entidad": {
+        "nif_titular": "Q-0000001-X",
+        "razon_social": "Consorcio Sanitario Metropolitano (Entidad Sintética Demostrativa)"
+      },
+      "nivel_2_centro": {
+        "nima": "2800000101",
+        "provincia_ine": "28",
+        "provincia": "Madrid",
+        "ccaa": "Comunidad de Madrid",
+        "cnae": "8622",
+        "coordenadas_etrs89": [40.4168, -3.7038]
+      },
+      "nivel_3_inscripcion": {
+        "codigo_tipo": "P02",
+        "descripcion_tipo": "Pequeño Productor de Residuos Peligrosos (< 10 t/año)",
+        "numero_inscripcion": "MAD-P02-2026-0049201",
+        "operaciones_autorizadas_ler": {
+          "18 01 03*": ["D09", "D10"],
+          "18 01 01": ["D09", "D10"],
+          "20 03 01": ["D01"],
+          "15 01 02": ["R03"],
+          "15 01 01": ["R03"]
+        }
+      },
+      "gestor_autorizado_destino": {
+        "nima": "2800099812",
+        "razon_social": "Ecosistemas Biosanitarios de Madrid S.L.",
+        "codigo_tipo": "G01",
+        "operacion_rd_principal": "D09"
+      },
+      "transportista_autorizado": {
+        "nima": "2800088194",
+        "razon_social": "Logística Sanitaria Especializada S.A.",
+        "codigo_tipo": "T01"
+      }
+    }
+  },
+  "energy_and_scope1_2_baseline": {
+    "annual_electricity_consumption_kWh": 74500.0,
+    "hvac_installed_thermal_capacity_kW": 45.0,
+    "hvac_refrigerant_type": "R-410A",
+    "hvac_refrigerant_charge_kg": 18.5,
+    "emergency_diesel_generator_liters_per_year": 420.0
+  },
+  "logistics_routes_km": {
+    "thermal_treatment_route_km": 65.0,
+    "landfill_disposal_route_km": 35.0
+  },
+  "monthly_time_series_25_months": [
+    {"period": "2024-03", "year": 2024, "month": "Marzo", "bio_kg": 8.52, "red_bags": 42, "common_kg": 166.80, "black_bags": 360, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-04", "year": 2024, "month": "Abril", "bio_kg": 8.50, "red_bags": 150, "common_kg": 181.80, "black_bags": 375, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-05", "year": 2024, "month": "Mayo", "bio_kg": 8.05, "red_bags": 156, "common_kg": 186.45, "black_bags": 390, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-06", "year": 2024, "month": "Junio", "bio_kg": 7.95, "red_bags": 138, "common_kg": 152.40, "black_bags": 345, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-07", "year": 2024, "month": "Julio", "bio_kg": 9.40, "red_bags": 144, "common_kg": 166.00, "black_bags": 360, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-08", "year": 2024, "month": "Agosto", "bio_kg": 9.90, "red_bags": 150, "common_kg": 174.55, "black_bags": 375, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-09", "year": 2024, "month": "Septiembre", "bio_kg": 8.60, "red_bags": 150, "common_kg": 199.23, "black_bags": 375, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-10", "year": 2024, "month": "Octubre", "bio_kg": 10.00, "red_bags": 150, "common_kg": 200.75, "black_bags": 375, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-11", "year": 2024, "month": "Noviembre", "bio_kg": 12.35, "red_bags": 150, "common_kg": 172.05, "black_bags": 375, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2024-12", "year": 2024, "month": "Diciembre", "bio_kg": 10.90, "red_bags": 144, "common_kg": 187.79, "black_bags": 360, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-01", "year": 2025, "month": "Enero", "bio_kg": 7.05, "red_bags": 156, "common_kg": 169.93, "black_bags": 390, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-02", "year": 2025, "month": "Febrero", "bio_kg": 8.05, "red_bags": 162, "common_kg": 177.93, "black_bags": 360, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-03", "year": 2025, "month": "Marzo", "bio_kg": 6.95, "red_bags": 156, "common_kg": 236.00, "black_bags": 390, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-04", "year": 2025, "month": "Abril", "bio_kg": 7.60, "red_bags": 192, "common_kg": 162.04, "black_bags": 408, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-05", "year": 2025, "month": "Mayo", "bio_kg": 10.15, "red_bags": 216, "common_kg": 127.99, "black_bags": 459, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-06", "year": 2025, "month": "Junio", "bio_kg": 7.15, "red_bags": 192, "common_kg": 101.96, "black_bags": 408, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-07", "year": 2025, "month": "Julio", "bio_kg": 6.35, "red_bags": 152, "common_kg": 81.93, "black_bags": 408, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-08", "year": 2025, "month": "Agosto", "bio_kg": 8.75, "red_bags": 192, "common_kg": 71.94, "black_bags": 408, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-09", "year": 2025, "month": "Septiembre", "bio_kg": 13.05, "red_bags": 208, "common_kg": 46.45, "black_bags": 442, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-10", "year": 2025, "month": "Octubre", "bio_kg": 12.25, "red_bags": 208, "common_kg": 38.16, "black_bags": 442, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2025-11", "year": 2025, "month": "Noviembre", "bio_kg": 94.15, "red_bags": 200, "common_kg": 44.96, "black_bags": 425, "sharps_kg": 0.45, "rrp_boxes": 1},
+    {"period": "2025-12", "year": 2025, "month": "Diciembre", "bio_kg": 9.25, "red_bags": 192, "common_kg": 30.21, "black_bags": 408, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2026-01", "year": 2026, "month": "Enero", "bio_kg": 5.20, "red_bags": 208, "common_kg": 36.45, "black_bags": 442, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2026-02", "year": 2026, "month": "Febrero", "bio_kg": 7.80, "red_bags": 192, "common_kg": 43.53, "black_bags": 408, "sharps_kg": 0.0, "rrp_boxes": 0},
+    {"period": "2026-03", "year": 2026, "month": "Marzo", "bio_kg": 6.90, "red_bags": 156, "common_kg": 39.34, "black_bags": 442, "sharps_kg": 0.0, "rrp_boxes": 0}
+  ],
+  "services_breakdown_23_units": [
+    {"id": 1, "name": "Tópico y Procedimientos Clínicos", "floor": "Piso 1", "area_type": "Asistencial / Médico", "bio_kg_day": 0.031, "common_kg_day": 0.048, "total_kg_day": 0.079, "ler_code": "18 01 03* / 18 01 01"},
+    {"id": 2, "name": "Admisión, Caja, Archivo y Logística", "floor": "Piso 1", "area_type": "Administrativo", "bio_kg_day": 0.000, "common_kg_day": 0.123, "total_kg_day": 0.123, "ler_code": "20 03 01 / 15 01 01"},
+    {"id": 3, "name": "Sala de Espera - Planta Baja", "floor": "Piso 1", "area_type": "Área Común", "bio_kg_day": 0.000, "common_kg_day": 0.059, "total_kg_day": 0.059, "ler_code": "20 03 01"},
+    {"id": 4, "name": "Servicio Higiénico Mujeres - Piso 1", "floor": "Piso 1", "area_type": "Higiénico Pacientes", "bio_kg_day": 0.057, "common_kg_day": 0.000, "total_kg_day": 0.057, "ler_code": "18 01 03* (Sobresegregado) / 20 03 01"},
+    {"id": 5, "name": "Servicio Higiénico Hombres - Piso 1", "floor": "Piso 1", "area_type": "Higiénico Pacientes", "bio_kg_day": 0.101, "common_kg_day": 0.000, "total_kg_day": 0.101, "ler_code": "18 01 03* (Sobresegregado) / 20 03 01"},
+    {"id": 6, "name": "Servicio Higiénico Personal - Piso 1", "floor": "Piso 1", "area_type": "Higiénico Personal", "bio_kg_day": 0.000, "common_kg_day": 0.179, "total_kg_day": 0.179, "ler_code": "20 03 01"},
+    {"id": 7, "name": "Farmacia y Depósito de Medicamentos", "floor": "Piso 1", "area_type": "Asistencial / Farmacia", "bio_kg_day": 0.000, "common_kg_day": 0.030, "total_kg_day": 0.030, "ler_code": "18 01 09 / 15 01 01"},
+    {"id": 8, "name": "Consultorio Niños y Adolescentes", "floor": "Piso 1", "area_type": "Consulta Externa", "bio_kg_day": 0.000, "common_kg_day": 0.053, "total_kg_day": 0.053, "ler_code": "20 03 01"},
+    {"id": 9, "name": "Consultorio Adultos y Mayores", "floor": "Piso 1", "area_type": "Consulta Externa", "bio_kg_day": 0.000, "common_kg_day": 0.068, "total_kg_day": 0.068, "ler_code": "20 03 01"},
+    {"id": 10, "name": "Consultorio Adicciones", "floor": "Piso 1", "area_type": "Consulta Externa", "bio_kg_day": 0.000, "common_kg_day": 0.101, "total_kg_day": 0.101, "ler_code": "20 03 01"},
+    {"id": 11, "name": "Acogida y Triaje Inicial", "floor": "Piso 1", "area_type": "Consulta Externa", "bio_kg_day": 0.000, "common_kg_day": 0.090, "total_kg_day": 0.090, "ler_code": "20 03 01"},
+    {"id": 12, "name": "Sala Polivalente Multipropósito (SUM)", "floor": "Piso 2", "area_type": "Taller / Grupal", "bio_kg_day": 0.000, "common_kg_day": 0.005, "total_kg_day": 0.005, "ler_code": "20 03 01"},
+    {"id": 13, "name": "Taller Rehabilitación y Cocina Terapéutica", "floor": "Piso 2", "area_type": "Taller / Nutrición", "bio_kg_day": 0.000, "common_kg_day": 0.041, "total_kg_day": 0.041, "ler_code": "20 03 01"},
+    {"id": 14, "name": "Sala Taller Psicosocial Infanto-Juvenil", "floor": "Piso 2", "area_type": "Taller / Grupal", "bio_kg_day": 0.000, "common_kg_day": 0.141, "total_kg_day": 0.141, "ler_code": "20 03 01"},
+    {"id": 15, "name": "Módulo de Terapia Ocupacional y Lenguaje", "floor": "Piso 2", "area_type": "Terapia Especializada", "bio_kg_day": 0.000, "common_kg_day": 0.061, "total_kg_day": 0.061, "ler_code": "20 03 01"},
+    {"id": 16, "name": "Sala de Trabajo Grupal Psiquiatría", "floor": "Piso 2", "area_type": "Consulta Médica", "bio_kg_day": 0.000, "common_kg_day": 0.137, "total_kg_day": 0.137, "ler_code": "20 03 01"},
+    {"id": 17, "name": "Dirección Médica y Jefatura", "floor": "Piso 2", "area_type": "Dirección Médica", "bio_kg_day": 0.001, "common_kg_day": 0.011, "total_kg_day": 0.012, "ler_code": "20 03 01"},
+    {"id": 18, "name": "Servicio de Participación Social", "floor": "Piso 2", "area_type": "Comunitario", "bio_kg_day": 0.000, "common_kg_day": 0.000, "total_kg_day": 0.000, "ler_code": "20 03 01"},
+    {"id": 19, "name": "Sala de Espera - Planta Alta", "floor": "Piso 2", "area_type": "Área Común", "bio_kg_day": 0.000, "common_kg_day": 0.370, "total_kg_day": 0.370, "ler_code": "20 03 01"},
+    {"id": 20, "name": "Servicio Higiénico Mujeres - Piso 2", "floor": "Piso 2", "area_type": "Higiénico Pacientes", "bio_kg_day": 0.085, "common_kg_day": 0.000, "total_kg_day": 0.085, "ler_code": "18 01 03* (Sobresegregado) / 20 03 01"},
+    {"id": 21, "name": "Servicio Higiénico Hombres - Piso 2", "floor": "Piso 2", "area_type": "Higiénico Pacientes", "bio_kg_day": 0.166, "common_kg_day": 0.000, "total_kg_day": 0.166, "ler_code": "18 01 03* (Sobresegregado) / 20 03 01"},
+    {"id": 22, "name": "Servicio Higiénico Personal - Piso 2", "floor": "Piso 2", "area_type": "Higiénico Personal", "bio_kg_day": 0.000, "common_kg_day": 0.037, "total_kg_day": 0.037, "ler_code": "20 03 01"},
+    {"id": 23, "name": "Almacén Intermedio y Depósito", "floor": "Piso 1", "area_type": "Logística", "bio_kg_day": 0.000, "common_kg_day": 0.000, "total_kg_day": 0.000, "ler_code": "15 01 01"}
+  ]
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    
+    <radialGradient id="cardGlow_circular_ouroboros_light" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#30D158" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#FAFCFA" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="borderGrad_circular_ouroboros_light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#30D158" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#CBD5E1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#30D158" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#cardGlow_circular_ouroboros_light)" stroke="url(#borderGrad_circular_ouroboros_light)" stroke-width="3"/>
+  <circle cx="256" cy="230" r="120" fill="none" stroke="#30D158" stroke-width="1.2" stroke-dasharray="4 8" opacity="0.35"/>
+
+  
+        <!-- Símbolo Circular: Bucle Infinito Möbius / Ouroboros -->
+        <path d="M 225,230 C 195,190 170,230 200,260 C 230,290 282,170 312,200 C 342,230 318,270 288,230 C 258,190 210,310 180,280" 
+              fill="none" stroke="#30D158" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="194" cy="230" r="8" fill="#FFFFFF"/>
+        <circle cx="318" cy="230" r="8" fill="#FFFFFF"/>
+        
+
+  <!-- Tipografía Suiza & Endoso Yggdrasil -->
+  <g text-anchor="middle">
+    <text x="256" y="85" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#475569" letter-spacing="4">YGGDRASIL COMPUTING</text>
+    <text x="256" y="388" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A" letter-spacing="2">CIRCULAR-CORE</text>
+    <text x="256" y="415" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#30D158" letter-spacing="4">OUROBOROS</text>
+    <text x="256" y="442" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#64748B" letter-spacing="2">KERNEL ANGLE · 045°E</text>
+  </g>
+</svg>

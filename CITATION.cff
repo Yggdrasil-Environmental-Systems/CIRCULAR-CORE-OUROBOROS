@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use CIRCULAR-CORE: OUROBOROS in your research, circular economy audits, or LCA inventories, please cite it using the metadata below."
+title: "CIRCULAR-CORE: OUROBOROS - Cyber-Physical Circular Metabolism, EWC/LER Gravimetric Accounting & Scope 1-2-3 Decarbonization Platform"
+version: 1.0.0
+doi: 10.5281/zenodo.24114014
+url: "https://doi.org/10.5281/zenodo.24114014"
+repository-code: "https://github.com/Yggdrasil-Environmental-Systems/CIRCULAR-CORE-OUROBOROS"
+date-released: 2026-11-11
+license: GPL-3.0-or-later
+authors:
+  - family-names: "Flores Yarihuaman"
+    given-names: "Kelvin Jesús"
+    affiliation: "Yggdrasil Environmental Systems"
+    role: "Lead Systems Architect & Environmental Engineer (MECES Level 3 / EQF Level 7)"
+keywords:
+  - "Circular Economy"
+  - "ISO 59020"
+  - "ISO 14064-1"
+  - "ISO 14040"
+  - "European Waste Catalogue (LER)"
+  - "Scope 3 Decarbonization"
+  - "Physics-Informed Neural Networks"
+  - "Hospital Waste Metabolism"

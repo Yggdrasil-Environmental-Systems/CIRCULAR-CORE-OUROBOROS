@@ -1,0 +1,51 @@
+{
+  "project_metadata": {
+    "protocol_id": "CIVIL-WORKS-SOLAR-INFRASTRUCTURE-01",
+    "project_typology": "Obra Civil & Infraestructura de Generación Renovable (500 kWp)",
+    "jurisdiction": "Comunidad Valenciana, España",
+    "regulatory_framework": "Real Decreto 105/2008 de RCD, Ley 7/2022, Real Decreto 764/2026 & Orden TED/1024/2026",
+    "legal_recovery_target_pct": 70.0,
+    "fianza_municipal_depositada_eur": 12500.0,
+    "miteco_rd764_registration": {
+      "nivel_1_entidad": {
+        "nif_titular": "A-46093811",
+        "razon_social": "Infraestructuras y Energía Renovable de Levante S.A."
+      },
+      "nivel_2_centro": {
+        "nima": "4600093811",
+        "provincia_ine": "46",
+        "provincia": "Valencia / València",
+        "ccaa": "Comunidad Valenciana",
+        "cnae": "4222 - Construcción de redes eléctricas y telecomunicaciones",
+        "coordenadas_etrs89": [39.6800, -0.2800]
+      },
+      "nivel_3_inscripcion": {
+        "codigo_tipo": "P04",
+        "descripcion_tipo": "Productor de Residuos No Peligrosos de Construcción (< 1.000 t/año)",
+        "numero_inscripcion": "VAL-P04-2026-0093811"
+      },
+      "gestor_autorizado_rcd": {
+        "nima": "4600072910",
+        "razon_social": "Áridos y Reciclados del Mediterráneo S.L.",
+        "codigo_tipo": "G04",
+        "operacion_rd_principal": "R05",
+        "certificacion_trazabilidad": "Certificado de Valorización Oficial para Devolución de Fianza Municipal"
+      },
+      "gestor_fraccion_resto_vertedero": {
+        "nima": "4600011204",
+        "razon_social": "Depósitos Controlados del Turia S.A.",
+        "codigo_tipo": "G04",
+        "operacion_rd_principal": "D01"
+      }
+    }
+  },
+  "rcd_inventory_tons": [
+    {"ler_code": "17 01 01", "description": "Hormigón y cascotes limpios", "quantity_tons": 42.50, "destination": "Planta de Machaqueo / Árido Reciclado", "operacion_rd": "R05", "gestor_nima": "4600072910", "valorizado": true},
+    {"ler_code": "17 01 02", "description": "Ladrillos, tejas y cerámicos", "quantity_tons": 18.20, "destination": "Base granular para viales", "operacion_rd": "R05", "gestor_nima": "4600072910", "valorizado": true},
+    {"ler_code": "17 05 04", "description": "Tierras y piedras de excavación limpias", "quantity_tons": 54.00, "destination": "Restauración morfológica / Relleno", "operacion_rd": "R05", "gestor_nima": "4600072910", "valorizado": true},
+    {"ler_code": "17 04 05", "description": "Hierro y acero de ferralla y perfiles", "quantity_tons": 8.40, "destination": "Fundición y siderurgia circular", "operacion_rd": "R04", "gestor_nima": "4600072910", "valorizado": true},
+    {"ler_code": "17 02 01", "description": "Madera de encofrados y palés", "quantity_tons": 4.10, "destination": "Biomasa y tablero aglomerado", "operacion_rd": "R03", "gestor_nima": "4600072910", "valorizado": true},
+    {"ler_code": "17 02 03", "description": "Plásticos film de embalaje y tubería corrugada", "quantity_tons": 2.80, "destination": "Reciclaje mecánico de polímeros", "operacion_rd": "R03", "gestor_nima": "4600072910", "valorizado": true},
+    {"ler_code": "17 09 04", "description": "Residuos de construcción mezclados (Fracción resto)", "quantity_tons": 15.00, "destination": "Vertedero de RCD autorizado", "operacion_rd": "D01", "gestor_nima": "4600011204", "valorizado": false}
+  ]
+}

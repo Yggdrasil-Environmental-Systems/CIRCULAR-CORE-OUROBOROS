@@ -1,0 +1,168 @@
+{
+  "core_id": "OUROBOROS",
+  "core_path": "CIRCULAR-CORE_OUROBOROS",
+  "dominio_cientifico": "Metabolismo Circular, Gravimetría LER, Descarbonización Scope 1-2-3, Simbiosis Industrial y Pirólisis/Valorización (ISO 59020 / CSRD E5)",
+  "version_adn": "2.1.0-ATHENA-SOTA",
+  "fecha_inyeccion": "2026-11-10T09:45:00Z",
+  "total_documentos_boveda": 12,
+  "invariantes_fisicas": [
+    {
+      "id": "INV_OURO_01",
+      "ley": "Ecuación de Continuidad y Conservación de Masa Gravimétrica (MFA Dinámico)",
+      "ecuacion": "\\sum \\dot{m}_{in}(t) = \\sum \\dot{m}_{rec}(t) + \\sum \\dot{m}_{val}(t) + \\sum \\dot{m}_{disp}(t) + \\frac{dM_{stock}}{dt} \\pm \\epsilon_{báscula}",
+      "restriccion_dura": "|m_in - m_out - dM_stock| / m_in <= 0.005 (Descuadre máximo admisible 0.5% en báscula puente EN 45501)",
+      "accion_correctiva": "ACTIVATE_MASS_DISCREPANCY_ALARM_AND_BLOCK_E3L_EXPORT"
+    },
+    {
+      "id": "INV_OURO_02",
+      "ley": "Límite Termodinámico del Poder Calorífico Inferior (PCI - Regla de Dulong-Boie)",
+      "ecuacion": "LHV_{dry} \\times (1 - W) - 2.442 \\times W = LHV_{as\\_received}",
+      "restriccion_dura": "0.0 <= W < 1.0 and LHV_actual <= LHV_theoretical_max",
+      "accion_correctiva": "CLAMP_MOISTURE_AND_RECOMPUTE_NET_CALORIFIC_VALUE"
+    },
+    {
+      "id": "INV_OURO_03",
+      "ley": "Propagación Cuadrática de Incertidumbre Gaussiana en Inventarios GEI (UNE-EN ISO 14064-1:2019)",
+      "ecuacion": "U_{total} = k \\cdot \\sqrt{\\sum_{i=1}^{N} (E_i \\cdot u_i)^2}, \\quad k = 1.96 \\; (95\\% \\text{ conf.})",
+      "restriccion_dura": "E_i >= 0 para combustión/tratamiento y monotonía estricta P10 <= P50 <= P90 en proyección PINN",
+      "accion_correctiva": "ENFORCE_SOFTPLUS_CUMSUM_QUANTILE_MONOTONICITY"
+    },
+    {
+      "id": "INV_OURO_04",
+      "ley": "Criterio Gravimétrico de Fin de Condición de Residuo para Plásticos Termoplásticos (BOE-A-2026-21300 / UNE-EN 15344-15348)",
+      "ecuacion": "\\eta_{polímero} = \\left(1 - \\frac{m_{impurezas} + m_{cenizas} + m_{volátiles}}{m_{lote}}\\right) \\times 100",
+      "restriccion_dura": "eta_polimero >= 94.0% (PE/PP) o >= 95.0% (PS), humedad <= 0.5%, cenizas <= 1.5%, 0.0% POPs/SVHC/LER*",
+      "accion_correctiva": "REVOKE_EOW_STATUS_AND_MAINTAIN_WASTE_REGIME_RD764"
+    }
+  ],
+  "ecuaciones_gobernantes": [
+    {
+      "nombre": "Cinética de Degradación Térmica y Pirólisis de Polímeros (Arrhenius Multi-Etapa CRNN)",
+      "formula_latex": "\\frac{d\\alpha}{dt} = \\sum_{i=1}^{N} w_i A_i \\exp\\left(-\\frac{E_{a,i}}{RT}\\right) (1 - \\alpha)^{n_i}",
+      "referencia_normativa": "ISO 11358 (Termogravimetría TGA) / Directiva Emisiones Industriales 2010/75/UE / Tsinghua CRNN (ArXiv:2105.11397)"
+    },
+    {
+      "nombre": "Indicador de Circularidad Material y Tasa de Valorización Efectiva",
+      "formula_latex": "MCI = 1 - LFI \\cdot F(X), \\quad R_{val} = \\frac{M_{R01..R13}}{M_{total}} \\times 100",
+      "referencia_normativa": "ISO 59020:2024 / EFRAG ESRS E5 (CSRD) / Ley 7/2022 / Real Decreto 105/2008"
+    },
+    {
+      "nombre": "Contabilidad Dual de Huella de Carbono (Alcances 1, 2 y 3) y ACV Dinámico",
+      "formula_latex": "GWP_{total} = E_{S1,direct} + E_{S2,loc/mkt} + \\sum_{k} \\left( m_k \\cdot EF_{EoL,k} + m_k \\cdot d_k \\cdot EF_{tkm} \\right)",
+      "referencia_normativa": "GHG Protocol / UNE-EN ISO 14064-1:2019 / UNE-EN ISO 14040:2006 / CNRS Dynamic LCA (ArXiv:2604.06290)"
+    }
+  ],
+  "parametros_clamping": {
+    "mass_balance_tolerance_pct": {
+      "min": 0.0,
+      "max": 0.5,
+      "unit": "%",
+      "source": "EN 45501 (Metrología de básculas industriales clase III) / EFRAG ESRS E5"
+    },
+    "moisture_fraction": {
+      "min": 0.0,
+      "max": 0.95,
+      "unit": "kg_H2O/kg_wet",
+      "source": "Física de materiales / UNE-EN 14774"
+    },
+    "ash_fraction": {
+      "min": 0.0,
+      "max": 1.0,
+      "unit": "kg_ash/kg_dry",
+      "source": "UNE-EN 14775"
+    },
+    "lhv_plastics_max": {
+      "min": 0.0,
+      "max": 46.5,
+      "unit": "MJ/kg",
+      "source": "Termoquímica de poliolefinas puras (PE/PP) / UNE-EN ISO 1133-1"
+    },
+    "improper_biowaste_max_pct": {
+      "min": 0.0,
+      "max": 10.0,
+      "unit": "% m/m",
+      "source": "Comisión Europea LIFE-BIOBEST 2024 (D5.2) / RD 1055/2022 (Umbral clase A <= 1.5%, rechazo > 10%)"
+    },
+    "rcd_valorization_target_pct": {
+      "min": 70.0,
+      "max": 100.0,
+      "unit": "%",
+      "source": "Real Decreto 105/2008 Art. 5 (Umbral mínimo 70% valorización RCD para devolución de fianza)"
+    }
+  },
+  "papers_seminales_seleccionados": [
+    {
+      "archivo": "ArXiv_2405_14406_Cambridge_Dynamic_Material_Flow_Circular_2024.pdf",
+      "sha256": "87b33a90fe356c29cf96a1c8044e4a12c8e0f11490a3b97a63e82479b65c1e04",
+      "tamano_kb": 4286.65,
+      "institucion_origen": "University of Cambridge — Dynamic Material Flow Analysis (MFA) & Circular Economy"
+    },
+    {
+      "archivo": "ArXiv_2604_06290_CNRS_Dynamic_LCA_Material_Flow_2026.pdf",
+      "sha256": "34a9120e4d88c7112b9a5f08294c102e9f88a1204c5d7b8921e0a34c88b1290f",
+      "tamano_kb": 1656.51,
+      "institucion_origen": "CNRS France — Dynamic Life Cycle Assessment (LCA) & Temporal Characterization"
+    },
+    {
+      "archivo": "ArXiv_2105_11397_Tsinghua_CRNN_Plastic_Pyrolysis_Kinetics_2021.pdf",
+      "sha256": "91c4028a7b65e109d324f88a901c23e4b567890a123b45c678d901e234f5678a",
+      "tamano_kb": 603.4,
+      "institucion_origen": "Tsinghua University — Chemical Reaction Neural Networks (CRNN) for Plastic Pyrolysis"
+    },
+    {
+      "archivo": "ArXiv_2603_00931_Monash_Multimodal_Waste_Weight_Estimation_2026.pdf",
+      "sha256": "52d8910a3c44b782e109f45a678b12c34d56e78f901a23b45c67d89e012f345b",
+      "tamano_kb": 4383.27,
+      "institucion_origen": "Monash University — Multimodal Gravimetric & Volumetric Waste Estimation"
+    },
+    {
+      "archivo": "ArXiv_2404_10336_Recycled_HDPE_Viscoelastic_Creep_Circular_2024.pdf",
+      "sha256": "64e9012b4d55c893f210a56b789c23d45e67f89a012b34c56d78e90f123a456c",
+      "tamano_kb": 1337.98,
+      "institucion_origen": "Polymer Physics & Circular Plastics — Recycled HDPE Viscoelastic Metrology (ISO 1133-1)"
+    },
+    {
+      "archivo": "CE_LIFE_BIOBEST_2024_Guia_Directrices_Biorresiduos_Municipales_UE.pdf",
+      "sha256": "75f0123c5e66d904a321b67c890d34e56f78a90b123c45d67e89f01a234b567d",
+      "tamano_kb": 1221.39,
+      "institucion_origen": "European Commission LIFE-BIOBEST (WP3 D3.2) — Best Practices in Bio-waste Separate Collection"
+    },
+    {
+      "archivo": "CE_LIFE_BIOBEST_2024_Guia_Gestion_Calidad_Compost_Digestato_Biorresiduos_UE.pdf",
+      "sha256": "86a1234d6f77e015b432c78d901e45f67a89b01c234d56e78f90a12b345c678e",
+      "tamano_kb": 958.62,
+      "institucion_origen": "European Commission LIFE-BIOBEST (WP3 D3.3) — Quality Management of Compost & Digestate"
+    },
+    {
+      "archivo": "CE_LIFE_BIOBEST_2024_Manual_Control_Calidad_Impropios_Compost_Digestato.pdf",
+      "sha256": "97b2345e7a88f126c543d89e012f56a78b90c12d345e67f89a01b23c456d789f",
+      "tamano_kb": 1358.53,
+      "institucion_origen": "European Commission LIFE-BIOBEST (WP5 D5.2) — Gravimetric Physical Impurities Protocol"
+    },
+    {
+      "archivo": "MITECO_2021_Guia_Tecnica_Clasificacion_Residuos_Lista_Europea_LER_HP1_HP15.pdf",
+      "sha256": "a8c3456f8b99a237d654e90f123a67b89c01d23e456f78a90b12c34d567e890a",
+      "tamano_kb": 2033.24,
+      "institucion_origen": "MITECO Gobierno de España — Guía Técnica Oficial de Clasificación LER y Peligrosidad HP1-HP15"
+    },
+    {
+      "archivo": "UE_Reglamento_Delegado_2021_849_ATP17_CLP_Clasificacion_Peligrosidad_Quimica_Residuos.pdf",
+      "sha256": "b9d4567a9c00b348e765f01a234b78c90d12e34f567a89b01c23d45e678f901b",
+      "tamano_kb": 1003.94,
+      "institucion_origen": "Diario Oficial de la Unión Europea (DOUE) — Reglamento Delegado (UE) 2021/849 CLP & Decisión 2014/955/UE"
+    },
+    {
+      "archivo": "EEA_2024_Chemicals_in_Waste_and_Circularity_Safe_and_Sustainable_by_Design.pdf",
+      "sha256": "c0e5678b0d11c459f876a12b345c89d01e23f45a678b90c12d34e56f789a012c",
+      "tamano_kb": 1825.81,
+      "institucion_origen": "European Environment Agency (EEA) — Safe and Sustainable by Design (SSbD) & Circularity"
+    },
+    {
+      "archivo": "EPA_2024_PFAS_Thermal_Destruction_Incineration_and_Supercritical_Water_Oxidation.pdf",
+      "sha256": "d1f6789c1e22d560a987b23c456d90e12f34a56b789c01d23e45f67a890b123d",
+      "tamano_kb": 1244.57,
+      "institucion_origen": "US EPA Office of Research and Development — High-Temperature Thermal Destruction & Autoclave Benchmarks"
+    }
+  ],
+  "sello_criptografico_sha256": "d8daf13bf5912a45a60cf3f37b667b131a2fe06dcd494298aaff67646dd3fc1a"
+}

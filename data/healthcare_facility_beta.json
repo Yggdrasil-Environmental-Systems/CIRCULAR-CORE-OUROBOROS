@@ -1,0 +1,106 @@
+{
+  "facility_metadata": {
+    "protocol_id": "HEALTHCARE-FACILITY-BETA",
+    "facility_type": "Centro de Atención Primaria Ambulatoria & Procedimientos Invasivos (Nivel I-2)",
+    "location_jurisdiction": "Área Metropolitana - Sector Ribera Industrial",
+    "surface_area_m2": 680.0,
+    "audit_timeframe": "Diagnóstico Basal 2023 + Programa de Minimización 2023-2027",
+    "clinical_activity_profile": "Alto volumen de intervenciones clínicas invasivas (vacunatorio, curaciones, extracciones dentales, toma de citologías)",
+    "plans_in_place": [
+      "Diagnóstico Basal y Estudio de Caracterización Gravimétrica/Volumétrica",
+      "Programa Oficial de Minimización y Manejo de Residuos Sólidos 2023-2027 (Aprobado ante Autoridad Sanitaria)"
+    ],
+    "miteco_rd764_registration": {
+      "nivel_1_entidad": {
+        "nif_titular": "Q-0000002-X",
+        "razon_social": "Agrupación Asistencial Ambulatoria (Entidad Sintética Demostrativa)"
+      },
+      "nivel_2_centro": {
+        "nima": "2800000202",
+        "provincia_ine": "28",
+        "provincia": "Madrid",
+        "ccaa": "Comunidad de Madrid",
+        "cnae": "8621",
+        "coordenadas_etrs89": [40.4350, -3.6700]
+      },
+      "nivel_3_inscripcion": {
+        "codigo_tipo": "P02",
+        "descripcion_tipo": "Pequeño Productor de Residuos Peligrosos (< 10 t/año)",
+        "numero_inscripcion": "MAD-P02-2026-0018402",
+        "operaciones_autorizadas_ler": {
+          "18 01 03*": ["D09", "D10"],
+          "18 01 01": ["D09", "D10"],
+          "20 03 01": ["D01"],
+          "15 01 02": ["R03"],
+          "15 01 01": ["R03"]
+        }
+      },
+      "gestor_autorizado_destino": {
+        "nima": "2800099812",
+        "razon_social": "Ecosistemas Biosanitarios de Madrid S.L.",
+        "codigo_tipo": "G01",
+        "operacion_rd_principal": "D09"
+      },
+      "transportista_autorizado": {
+        "nima": "2800088194",
+        "razon_social": "Logística Sanitaria Especializada S.A.",
+        "codigo_tipo": "T01"
+      }
+    }
+  },
+  "energy_and_scope1_2_baseline": {
+    "annual_electricity_consumption_kWh": 28500.0,
+    "hvac_installed_thermal_capacity_kW": 18.0,
+    "hvac_refrigerant_type": "R-32",
+    "hvac_refrigerant_charge_kg": 4.5,
+    "emergency_diesel_generator_liters_per_year": 180.0
+  },
+  "logistics_routes_km": {
+    "thermal_treatment_route_km": 55.0,
+    "landfill_disposal_route_km": 30.0
+  },
+  "volumetric_characterization_cylindrical_bins": {
+    "bin_diameter_m": 0.27,
+    "bin_total_height_m": 0.37,
+    "topico_daily_volume_m3": 0.0153,
+    "odontologia_daily_volume_m3": 0.0118,
+    "obstetricia_daily_volume_m3": 0.0094,
+    "medicina_daily_volume_m3": 0.0082,
+    "triaje_daily_volume_m3": 0.0065,
+    "farmacia_daily_volume_m3": 0.0041,
+    "sshh_daily_volume_m3": 0.0135
+  },
+  "seven_day_gravimetric_campaign_kg": {
+    "days_monitored": 7,
+    "average_daily_common_kg": 16.50,
+    "average_daily_biocontaminated_kg": 2.45,
+    "average_daily_sharps_kg": 0.18,
+    "fractions_breakdown_kg_day": {
+      "papel_oficina": 3.60,
+      "carton_embalaje": 5.20,
+      "botellas_plastico_pet": 1.40,
+      "vidrio": 0.30,
+      "latas_metal": 0.40,
+      "materia_organica_comedor": 1.40,
+      "fraccion_resto_comun": 4.20
+    }
+  },
+  "monthly_aggregated_baseline_kg": {
+    "biocontaminated_kg_month": 73.50,
+    "sharps_kg_month": 5.40,
+    "common_kg_month": 495.00,
+    "total_monthly_waste_kg": 573.90,
+    "monthly_red_bags_consumed": 210,
+    "monthly_black_bags_consumed": 450,
+    "monthly_rrp_sharps_boxes_consumed": 6
+  },
+  "clinical_services_breakdown": [
+    {"service": "Tópico de Emergencias y Cirugía Menor", "bio_kg_day": 0.85, "sharps_kg_day": 0.06, "common_kg_day": 3.10, "primary_ler": "18 01 03* / 18 01 01"},
+    {"service": "Odontología y Salud Bucal", "bio_kg_day": 0.65, "sharps_kg_day": 0.07, "common_kg_day": 2.20, "primary_ler": "18 01 03* / 18 01 01"},
+    {"service": "Obstetricia y Salud Materno-Perinatal", "bio_kg_day": 0.45, "sharps_kg_day": 0.02, "common_kg_day": 1.90, "primary_ler": "18 01 03* / 18 01 01"},
+    {"service": "Inmunizaciones y Vacunatorio", "bio_kg_day": 0.35, "sharps_kg_day": 0.03, "common_kg_day": 1.40, "primary_ler": "18 01 03* / 18 01 01"},
+    {"service": "Medicina General y Triaje", "bio_kg_day": 0.10, "sharps_kg_day": 0.00, "common_kg_day": 2.80, "primary_ler": "20 03 01"},
+    {"service": "Farmacia y Almacén Medicamentos", "bio_kg_day": 0.00, "sharps_kg_day": 0.00, "common_kg_day": 1.60, "primary_ler": "18 01 09 / 15 01 01"},
+    {"service": "Servicios Higiénicos Generales", "bio_kg_day": 0.05, "sharps_kg_day": 0.00, "common_kg_day": 3.50, "primary_ler": "20 03 01"}
+  ]
+}

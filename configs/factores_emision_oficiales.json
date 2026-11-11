@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "version": "2.0-ENTERPRISE",
+    "updated": "2026-10-09",
+    "sources": [
+      "MITECO 2024 (Registro de Huella de Carbono, Compensación y Proyectos de Absorción)",
+      "IPCC Sixth Assessment Report (AR6) - Global Warming Potentials",
+      "DEFRA / UK Government GHG Conversion Factors 2024",
+      "NHS England Decarbonisation / Health Care Without Harm (HCWH)",
+      "Red Eléctrica de España (REE) / CNMC Factores Mix Peninsular"
+    ],
+    "ecosystem": "Yggdrasil Environmental Systems",
+    "core": "CIRCULAR-CORE: OUROBOROS (0x05)"
+  },
+  "scope_1_direct": {
+    "combustion_fuels": {
+      "diesel_heating_oil_kgCO2e_per_liter": 2.521,
+      "natural_gas_kgCO2e_per_kWh": 0.202,
+      "propane_kgCO2e_per_kg": 2.940
+    },
+    "refrigerant_fugitive_gwp_ar6": {
+      "R-410A": 2088.0,
+      "R-134a": 1430.0,
+      "R-32": 675.0,
+      "R-404A": 3922.0,
+      "R-407C": 1774.0
+    },
+    "default_leakage_rate_annual_pct": 0.035
+  },
+  "scope_2_electricity": {
+    "spain_peninsular_grid_location_based_kgCO2e_per_kWh": 0.185,
+    "market_based_certified_renewable_gdo_kgCO2e_per_kWh": 0.000,
+    "peru_central_grid_sein_kgCO2e_per_kWh": 0.245
+  },
+  "scope_3_value_chain": {
+    "category_5_waste_treatment_kgCO2e_per_kg": {
+      "incineracion_termica_1200C": 1.800,
+      "autoclave_esterilizacion_vapor": 0.220,
+      "vertedero_controlado_fraccion_resto": 0.580,
+      "vertedero_inertes_rcd": 0.012,
+      "reciclaje_mecanico_evitacion_neta": -0.700,
+      "compostaje_fraccion_organica": 0.110
+    },
+    "category_4_9_transport_kgCO2e_per_tkm": {
+      "camion_rigido_diesel_pesado": 0.190,
+      "furgoneta_reparto_ligera": 0.275,
+      "vehiculo_pesado_gnl": 0.145
+    },
+    "category_1_purchased_goods_kgCO2e_per_kg": {
+      "polietileno_alta_densidad_virgen_hdpe": 2.100,
+      "polietileno_baja_densidad_virgen_ldpe": 2.050,
+      "polietileno_reciclado_postconsumo": 0.650,
+      "cajas_rigidas_polipropileno_rrp": 1.950,
+      "papel_bond_virgen": 1.200
+    }
+  }
+}
